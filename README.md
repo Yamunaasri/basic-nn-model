@@ -63,14 +63,11 @@ import gspread
 from google.auth import default
 import pandas as pd
 
-
 auth.authenticate_user()
 creds, _ = default()
 gc = gspread.authorize(creds)
 
-
 worksheet = gc.open('dl_data_exp1').sheet1
-
 
 rows = worksheet.get_all_values()
 ```
